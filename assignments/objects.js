@@ -19,35 +19,35 @@ const example = {
 
 // Write your intern objects here:
 
-const itern1 = {
+const mitzi = {
   id: 1,
   email: 'mmelloy0@psu.edu',
   firstName: 'Mitzi',
   gender: 'F'
 }
 
-const itern2 = {
+const kennan = {
   id: 2,
   email: 'kdiben1@tinypic.com',
   firstName: 'Kennan',
   gender: 'M'
 }
 
-const itern3 = {
+const keven = {
   id: 3,
   email: 'kmummery2@wikimedia.org',
   firstName: 'keven',
   gender: 'M'
 }
 
-const itern4 = {
+const gannie = {
   id: 4,
   email: 'gmartinson3@illinois.edu',
   firstName: 'Gannie',
   gender: 'M'
 }
 
-const itern5 = {
+const antonietta = {
   id: 5,
   email: 'adaine5@samsung.com',
   firstName: 'Antonietta',
