@@ -19,26 +19,68 @@ const example = {
 
 // Write your intern objects here:
 
+const mitzi = {
+  id: 1,
+  email: 'mmelloy0@psu.edu',
+  firstName: 'Mitzi',
+  gender: 'F'
+}
+
+const kennan = {
+  id: 2,
+  email: 'kdiben1@tinypic.com',
+  firstName: 'Kennan',
+  gender: 'M'
+}
+
+const keven = {
+  id: 3,
+  email: 'kmummery2@wikimedia.org',
+  firstName: 'keven',
+  gender: 'M'
+}
+
+const gannie = {
+  id: 4,
+  email: 'gmartinson3@illinois.edu',
+  firstName: 'Gannie',
+  gender: 'M'
+}
+
+const antonietta = {
+  id: 5,
+  email: 'adaine5@samsung.com',
+  firstName: 'Antonietta',
+  gender: 'F'
+}
 
 // ==== Challenge 2: Reading Object Data ==== 
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
+console.log(mitzi.firstName);
 
 // Kennan's ID
+console.log(kennan.id);
 
 // Keven's email
+console.log(keven.email);
 
 // Gannie's name
+console.log(gannie.email);
 
 // Antonietta's Gender
+console.log(antonietta.gender);
 
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
 
+kennan.speak = () => { console.log('Hello, my name is Kenna!') };
+
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
+antonietta.multiply = (a, b) =>  a * b;
 
 // === Great work! === Head over to the the arrays.js. You may come back and attempt the Stretch Challenge once you have completed the challenges in arrays.js and function-conversion.js.
 
@@ -49,16 +91,41 @@ const example = {
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-const parent = {}
+const parent = {
+  name: 'Susan', 
+  age: 70, 
+  child : {
+    name: 'George', 
+    age: 50, 
+    child: {
+      name: 'Sam',
+      age: 30,
+    }}
+}
+
+function speak() {
+  console.log(`I am ${this.name}`);
+}
+
+parent.speak = speak;
+parent.child.speak = speak;
+parent.child.child.speak = speak;
 
 // Log the parent object's name
+console.log(parent.name);
 
 // Log the child's age
+console.log(parent.child.name)
 
 // Log the name and age of the grandchild
+console.log(parent.child.child.name);
+console.log(parent.child.child.age);
 
 // Have the parent speak
+parent.speak();
 
 // Have the child speak
+parent.child.speak();
 
 // Have the grandchild speak
+parent.child.child.speak();
